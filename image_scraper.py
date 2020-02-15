@@ -1,10 +1,9 @@
-
+from bs4 import BeautifulSoup
 import cv2
+import os
+import requests
 import shutil
 import urllib
-import requests
-from bs4 import BeautifulSoup
-import os
 
 
 # 環境整備
@@ -39,7 +38,6 @@ class ImageDownloader(object):
 class FaceDetector(object):
 
     # 学習済モデル
-    # FACE_CASCADE = '/home/websoler/anaconda3/lib/python3.7/site-packages/cv2/data/haarcascade_frontalface_default.xml'
     FACE_CASCADE = '/home/websoler/anaconda3/lib/python3.7/site-packages/cv2/data/lbpcascade_animeface.xml'
 
     def __init__(self, fname):
